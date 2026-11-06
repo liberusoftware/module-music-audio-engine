@@ -1,25 +1,9 @@
-# Liberu Music: Audio Engine and Transport — Core
+# Music Audio Engine
 
-> Documentation-only placeholder for the Liberu Music core module.
+Experimental, disabled by default, version 0.1.0.
 
-## Status
+This initial work in progress defines validated directed acyclic engine graphs, declared latency plans, and immutable project-pinned snapshots through the public Music Projects API. Graph state belongs to the project revision; the module has no separate tables.
 
-Repository reserved for `module-music-audio-engine`. No module implementation, Composer package, endpoints or UI components are provided yet.
+This package does not provide native audio execution, playback, transport, offline rendering, resampling, or verified hardware latency. Its graph and snapshot implementation is still awaiting dedicated tests and acceptance review. Do not treat this release as a working audio engine.
 
-## Planned scope
-
-See the [module plan](https://github.com/liberusoftware/documentation/blob/main/projects/music/core/audio-engine.md) and [domain specification](https://github.com/liberusoftware/documentation/blob/main/projects/music/features/audio-engine.md) for requirements and acceptance criteria.
-
-## Architecture
-
-Laravel coordinates persisted metadata, policy and asynchronous work. Real-time audio, device access and DSP belong to a separately specified local runtime; PHP and network requests must never run in the audio callback. Shared identity, authorization and storage follow the [foundation adoption plan](https://github.com/liberusoftware/documentation/blob/main/projects/music/FOUNDATION.md).
-
-## Related repositories
-
-- [Music application](https://github.com/liberusoftware/music-daw-laravel)
-- [Product documentation](https://github.com/liberusoftware/documentation/blob/main/projects/music/README.md)
-- [Delivery plan](https://github.com/liberusoftware/documentation/blob/main/projects/music/DEVELOPMENT.md)
-
-## Contributing
-
-Implementation will follow the documented contracts and delivery gates. This initial repository contains documentation only.
+The broader Audio Engine Core issue remains open. Full product acceptance and the repository's strict 100% source coverage gate remain outstanding.
